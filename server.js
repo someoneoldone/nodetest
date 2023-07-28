@@ -24,7 +24,7 @@ app.get('/student',(req,resp)=>{
     const sql="select * from student"
     db.query(sql,(err, data)=>{
         if(err) return resp.json(err)
-        return resp.json(data)
+        return resp.json({data})
     })
 })
 
