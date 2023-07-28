@@ -33,7 +33,7 @@ app.post('/create',(req,resp)=>{
     db.query(s,(err,data)=>{
         console.log(s)
         if(err) return resp.json(err)
-        return resp.json(data)
+        return resp.json({data})
     })
 })
 
