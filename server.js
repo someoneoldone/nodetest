@@ -28,6 +28,14 @@ app.get('/student',(req,resp)=>{
     })
 })
 
+app.get('/studentt',(req,resp)=>{
+    const sql="select * from student"
+    db.query(sql,(err, data)=>{
+        if(err) return resp.json(err)
+        return resp.json({data})
+    })
+})
+
 app.post('/create',(req,resp)=>{
     const s=`insert into student values (${req.body.ide},'${req.body.name}','${req.body.email}')`
     db.query(s,(err,data)=>{
