@@ -38,10 +38,10 @@ app.post('/create',(req,resp)=>{
 })
 
 app.delete('/delete',(res,resp)=>{
-    const d="delete * from student"
+    const d="delete from student"
     db.query(s,(err,data)=>{
         if(err) return resp.json(err)
-        return resp.json(data)
+        return resp.json({data})
     })
 })
 
