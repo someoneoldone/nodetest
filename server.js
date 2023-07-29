@@ -39,7 +39,7 @@ app.post('/create',(req,resp)=>{
 
 app.get('/delete',(res,resp)=>{
     const d="select * from student"
-    db.query(s,(err,data)=>{
+    db.query(d,(err,data)=>{
         if(err) return resp.json(err)
         return resp.json({data})
     })
