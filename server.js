@@ -37,6 +37,14 @@ app.post('/create',(req,resp)=>{
     })
 })
 
+app.delete('delete',(res,resp)=>{
+    const d="delete * from student"
+    db.query(s,(err,data)=>{
+        if(err) return res.json(err)
+        return res.json(data)
+    })
+})
+
 app.listen(8080,()=>{
     console.log("the server is running on port 8081")
 })
