@@ -45,8 +45,8 @@ app.post('/create',(req,resp)=>{
     })
 })
 
-app.get('/delete',(res,resp)=>{
-    const d="select * from student"
+app.delete('/delete',(res,resp)=>{
+    const d="delete from student"
     db.query(d,(err,data)=>{
         if(err) return resp.json(err)
         return resp.json({data})
